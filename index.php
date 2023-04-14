@@ -156,8 +156,8 @@ $q = $koneksi->query("SELECT * FROM warga");
                                                     <td><?= ($data['jenis_kelamin'] == 'L') ? 'Laki laki' : 'Perempuan' ?></td>
                                                     
                                                     <td><?= $data['tanggal_lahir'] ?></td>
-                                                    <td><a href="edit-warga.php?id=<?= $data['id'] ?>">Edit</a></td>
-                                                    <td><a href="?id_hapus=<?= $data['id'] ?>">Hapus</a></td>
+                                                    <td><a href="edit-warga.php?id=<?= $data['id'] ?>"><i class="fa-solid fa-pen-to-square"></i> Edit</a></td>
+                                                    <td><a href="?id_hapus=<?= $data['id'] ?>"><i class="fa-solid fa-trash"></i> Hapus</a></td>
                                                     
                                                 </tr>
                                                 <?php

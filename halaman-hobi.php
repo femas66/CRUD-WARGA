@@ -146,8 +146,8 @@ $q = $koneksi->query("SELECT * FROM hobi");
                                                     <td><?= $data['nama'] ?></td>
                                                     <td><?= $data['usia'] ?></td>
                                                     <td><?= $data['hobi'] ?></td>
-                                                    <td><a href="edit-hobi.php?id=<?= $data['id_hobi'] ?>">Edit</a></td>
-                                                    <td><a href="?id_hapus=<?= $data['id_hobi'] ?>">Hapus</a></td>
+                                                    <td><a href="edit-hobi.php?id=<?= $data['id_hobi'] ?>"><i class="fa-solid fa-pen-to-square"></i> Edit</a></td>
+                                                    <td><a href="?id_hapus=<?= $data['id_hobi'] ?>"><i class="fa-solid fa-trash"></i> Hapus</a></td>
                                                     
                                                 </tr>
                                                 <?php

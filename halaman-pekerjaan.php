@@ -149,8 +149,8 @@ $q = $koneksi->query("SELECT * FROM pekerjaan");
                                                     <td><?= $data['pekerjaan'] ?></td>
                                                     <td><?= $data['alamat'] ?></td>
                                                     <td><?= $data['gaji'] ?></td>
-                                                    <td><a href="edit-pekerjaan.php?id=<?= $data['id_pekerjaan'] ?>">Edit</a></td>
-                                                    <td><a href="?id_hapus=<?= $data['id_pekerjaan'] ?>">Hapus</a></td>
+                                                    <td><a href="edit-pekerjaan.php?id=<?= $data['id_pekerjaan'] ?>"><i class="fa-solid fa-pen-to-square"></i> Edit</a></td>
+                                                    <td><a href="?id_hapus=<?= $data['id_pekerjaan'] ?>"><i class="fa-solid fa-trash"></i> Hapus</a></td>
                                                     
                                                 </tr>
                                                 <?php

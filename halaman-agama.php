@@ -148,8 +148,8 @@ $q = $koneksi->query("SELECT * FROM agama");
                                                     <td><?= ($data['jenis_kelamin'] == 'L') ? 'Laki laki' : 'Perempuan' ?></td>
                                                     <td><?= $data['agama'] ?></td>
                                                     <td><?= $data['agama_sebelumnya'] ?></td>
-                                                    <td><a href="edit-agama.php?id=<?= $data['id_agama'] ?>">Edit</a></td>
-                                                    <td><a href="?id_hapus=<?= $data['id_agama'] ?>">Hapus</a></td>
+                                                    <td><a href="edit-agama.php?id=<?= $data['id_agama'] ?>"><i class="fa-solid fa-pen-to-square"></i> Edit</a></td>
+                                                    <td><a href="?id_hapus=<?= $data['id_agama'] ?>"><i class="fa-solid fa-trash"></i> Hapus</a></td>
                                                     
                                                 </tr>
                                                 <?php

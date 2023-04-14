@@ -148,8 +148,8 @@ $q = $koneksi->query("SELECT * FROM vaksin");
                                                     <td><?= $data['nik'] ?></td>
                                                     <td><?= $data['usia'] ?></td>
                                                     <td><?= ($data['vaksin'] == 'Y') ? "Sudah" : "Belum" ?></td>
-                                                    <td><a href="edit-vaksin.php?id=<?= $data['id_vaksin'] ?>">Edit</a></td>
-                                                    <td><a href="?id_hapus=<?= $data['id_vaksin'] ?>">Hapus</a></td>
+                                                    <td><a href="edit-vaksin.php?id=<?= $data['id_vaksin'] ?>"><i class="fa-solid fa-pen-to-square"></i> Edit</a></td>
+                                                    <td><a href="?id_hapus=<?= $data['id_vaksin'] ?>"><i class="fa-solid fa-trash"></i> Hapus</a></td>
                                                     
                                                 </tr>
                                                 <?php
