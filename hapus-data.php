@@ -1,5 +1,9 @@
 <?php
 include 'koneksi.php';
+session_start();
+if (!isset($_SESSION['id'])) {
+  header("location: login.php");
+}
 if(isset($_GET['hapus_vaksin'])){
   $id = $koneksi->real_escape_string($_GET['hapus_vaksin']);
   $q = $koneksi->query("DELETE FROM vaksin WHERE id_vaksin = '$id'");

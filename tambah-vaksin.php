@@ -11,7 +11,9 @@
   <?php
 include 'koneksi.php';
 session_start();
-
+if (!isset($_SESSION['id'])) {
+  header("location: login.php");
+}
 ?>
 <div class="container">
 <h3>Tambah data</h3><hr>
@@ -72,7 +74,7 @@ if (isset($_POST['submit'])) {
     <script>
       Swal.fire({
         icon: 'error',
-        title: 'Gagal menambah data',
+        title: 'NIK sudah digunakan',
         showConfirmButton: false,
         timer: 1000
       })

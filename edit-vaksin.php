@@ -11,6 +11,9 @@
   <?php
 include 'koneksi.php';
 session_start();
+if (!isset($_SESSION['id'])) {
+  header("location: login.php");
+}
 
 $q = $koneksi->query("SELECT * FROM vaksin WHERE id_vaksin = '$_GET[id]'");
 $data = $q->fetch_assoc();

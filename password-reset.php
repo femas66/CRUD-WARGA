@@ -181,21 +181,38 @@ include 'koneksi.php';
 <?php
 if (isset($_POST['submit'])) {
   $email = $_POST['email'];
-  $password_baru = md5($koneksi->real_escape_string($_POST['password']));
-  $sql = "UPDATE users SET password = '$password_baru' WHERE email = '$email'";
-  $query = $koneksi->query($sql);
-  if ($query) {
+  $cek_email = $koneksi->query("SELECT * FROM users WHERE email = '$email'");
+  if ($cek_email->num_rows > 0) {
+    $password_baru = md5($koneksi->real_escape_string($_POST['password']));
+    $sql = "UPDATE users SET password = '$password_baru' WHERE email = '$email'";
+    $query = $koneksi->query($sql);
+    if ($query) {
+      ?>
+      <script>
+        Swal.fire({
+          icon: 'success',
+          title: 'Berhasil mereset',
+          showConfirmButton: false,
+          timer: 1000
+        }).then(() => {
+          window.location = 'login.php';
+        })
+      </script>
+      <?php
+    }
+  } else {
     ?>
     <script>
       Swal.fire({
-        icon: 'success',
-        title: 'Berhasil nereset',
+        icon: 'error',
+        title: 'Email tidak ditemukan',
         showConfirmButton: false,
         timer: 1000
       }).then(() => {
-        window.location = 'login.php';
+        window.location = 'password-reset.php';
       })
     </script>
     <?php
   }
+  
 }

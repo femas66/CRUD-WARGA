@@ -11,7 +11,9 @@
   <?php
 include 'koneksi.php';
 session_start();
-
+if (!isset($_SESSION['id'])) {
+  header("location: login.php");
+}
 ?>
 <div class="container">
 <h3>Tambah data</h3><hr><form action="" method="post" enctype="multipart/form-data">
