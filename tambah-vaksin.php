@@ -31,11 +31,11 @@ session_start();
     <hr>
     <div class="form-check">
       <label for="l">Sudah vaksin</label>
-      <input type="radio" name="vaksin" id="l" value="Y" class="form-check-input">
+      <input type="radio" name="vaksin" id="l" value="Y" class="form-check-input" required>
     </div>
     <div class="form-check">
       <label for="p">Belum vaksin</label>
-      <input type="radio" name="vaksin" id="p" value="N" class="form-check-input">
+      <input type="radio" name="vaksin" id="p" value="N" class="form-check-input" required>
     </div>
     <hr>
     <div class="mb-3">

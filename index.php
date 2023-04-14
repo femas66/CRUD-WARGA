@@ -80,6 +80,7 @@ if (!isset($_SESSION['id'])) {
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                 
+                <h1 style="font-weight: bold; color:black;">Dashboard</h1>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
