@@ -76,9 +76,15 @@ if (isset($_POST['submit'])) {
       if ($a) {
         ?>
         <script>
-          alert('berhasil mengedit data');
-          window.location = 'index.php';
-        </script>
+      Swal.fire({
+        icon: 'success',
+        title: 'Berhasil menyimpan',
+        showConfirmButton: false,
+        timer: 1000
+      }).then(() => {
+        window.location = 'index.php';
+      })
+      </script>
         <?php
       }
       
